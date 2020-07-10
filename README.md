@@ -25,7 +25,7 @@ This app is written in Swift using SwiftUI. It demonstrates the use of [URKit](h
 
 ![](Images/1.jpg)
 
-**Sending screen.** A LifeHash displays a hash of the message being sent for easy recognition on the receiving side. The blue bar beneath the animated QR code shows the segments mixed into the currently displayed part. This is part of the fountain codes technique. The buttons below the QR code can be adjusted to show frames at a higher or lower rate.
+**Sending screen.** A [LifeHash](https://github.com/wolfmcnally/lifehash) displays a hash of the message being sent for easy recognition on the receiving side. The blue bar beneath the animated QR code shows the segments mixed into the currently displayed part. This is part of the fountain codes technique. The buttons below the QR code can be adjusted to show frames at a higher or lower rate.
 
 You can use the circular arrow button in the upper-right to choose a new message and restart the transmission.
 
