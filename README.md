@@ -47,8 +47,13 @@ You can use the circular arrow button in the upper-right to abort and restart th
 
 ### Video Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t-GGZ9FyuT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Explanation of the URDemo iOS application, which demonstrates Blockchain Commons research into transmitting different sizes of UR data, from small single QR codes to large animated fountain codes. 
 
-### Video of Reference Data
+https://youtu.be/t-GGZ9FyuT8
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YwgSmOa4ltg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### Referemce Video
+
+Video of Animated QR codes with test reference data for different sizes of UR data, from small single QR codes to large animated fountain codes. 
+
+https://youtu.be/YwgSmOa4ltg
+
