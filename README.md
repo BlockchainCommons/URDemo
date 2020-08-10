@@ -44,3 +44,16 @@ You can use the circular arrow button in the upper-right to abort and restart th
 **Acknowledgement screen.** Appears on successfully receiving a message. The LifeHash displayed on the sending and receiving devices should match.
 
 ![](Images/5.jpg)
+
+### Video Demo
+
+Explanation of the URDemo iOS application, which demonstrates Blockchain Commons research into transmitting different sizes of UR data, from small single QR codes to large animated fountain codes. 
+
+https://youtu.be/t-GGZ9FyuT8
+
+### Referemce Video
+
+Video of Animated QR codes with test reference data for different sizes of UR data, from small single QR codes to large animated fountain codes. 
+
+https://youtu.be/YwgSmOa4ltg
+
