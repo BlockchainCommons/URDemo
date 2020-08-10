@@ -9,6 +9,8 @@
 import SwiftUI
 import URKit
 
+protocol Preference { }
+
 struct DisplayScenario: View {
     @ObservedObject var runningScenario: RunningScenario
 
@@ -20,18 +22,22 @@ struct DisplayScenario: View {
         self.runningScenario = RunningScenario(scenario: scenario)
     }
 
+    @State var columnWidth: CGFloat?
+
     var body: some View {
         VStack(spacing: 20) {
-            HStack() {
-                Group {
+            ZStack {
+                HStack {
                     Text("length: \(runningScenario.messageLen)")
                     Text("maxFragment: \(runningScenario.maxFragmentLen)")
                     Text("parts: \(runningScenario.seqLen)")
                 }
                 .font(.caption)
-                Spacer()
-                Button(action: { self.runningScenario.restart() }) {
-                    Image(systemName: "arrow.counterclockwise")
+                HStack {
+                    Spacer()
+                    Button(action: { self.runningScenario.restart() }) {
+                        Image(systemName: "arrow.counterclockwise")
+                    }
                 }
             }
             VStack {
@@ -39,8 +45,14 @@ struct DisplayScenario: View {
                 QRCode(data: $runningScenario.part)
                     .frame(width: sizeClass == .regular ? 700 : 350)
                     .layoutPriority(1)
+                    .background(GeometryReader {
+                        Color.clear.preference(key: self.columnWidthKey, value: [$0.size.width])
+                    })
                 if !runningScenario.isSinglePart {
                     FragmentBar(views: $runningScenario.fragmentViews)
+                    .background(GeometryReader {
+                        Color.clear.preference(key: self.columnWidthKey, value: [$0.size.width])
+                    })
                     Text("\(runningScenario.seqNum)").font(Font.system(.headline).bold().monospacedDigit())
                     HStack(spacing: 40) {
                         SpeedButton(imageName: "tortoise.fill") { self.runningScenario.slower() }
@@ -51,6 +63,7 @@ struct DisplayScenario: View {
                 Spacer()
             }
         }
+        .frame(width: columnWidth)
         .padding()
         .navigationBarTitle(runningScenario.name)
         .onAppear {
@@ -59,7 +72,23 @@ struct DisplayScenario: View {
         .onDisappear {
             self.runningScenario.stop()
         }
+        .onPreferenceChange(columnWidthKey) { prefs in
+            let minPref = prefs.reduce(CGFloat.infinity, min)
+            if minPref > 0 {
+                self.columnWidth = minPref
+            }
+        }
     }
+
+    struct AppendValue<T: Preference>: PreferenceKey {
+        static var defaultValue: [CGFloat] { [] }
+        static func reduce(value: inout [CGFloat], nextValue: () -> [CGFloat]) {
+            value.append(contentsOf: nextValue())
+        }
+    }
+
+    enum ColumnWidth: Preference { }
+    let columnWidthKey = AppendValue<ColumnWidth>.self
 }
 
 struct DisplayScenario_Previews: PreviewProvider {
@@ -68,7 +97,9 @@ struct DisplayScenario_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             DisplayScenario(scenario: Self.scenario)
-        }.darkMode()
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .darkMode()
     }
 }
 

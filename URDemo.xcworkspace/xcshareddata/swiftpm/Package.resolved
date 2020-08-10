@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/wolfmcnally/LifeHash.git",
         "state": {
           "branch": null,
-          "revision": "42bd468dcfadbf65bc0a5b66b35c1506da51a7a3",
-          "version": "4.1.0"
+          "revision": "73229c279377cdd17cede1670e89ddc427d88497",
+          "version": "4.2.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/BlockchainCommons/URKit.git",
         "state": {
           "branch": null,
-          "revision": "e0b2f087e0d481e6842315de5b520fd16707510f",
-          "version": "1.0.1"
+          "revision": "444651931738f5e3a3919cdfe522abde129122e0",
+          "version": "1.0.4"
         }
       },
       {

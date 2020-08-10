@@ -38,7 +38,7 @@ class RunningScenario: ObservableObject {
     var messageLen: Int { message.count }
     var seqNum: UInt32 { encoder.seqNum }
     var seqLen: Int { encoder.seqLen }
-    var partIndexes: Set<Int> { encoder.partIndexes }
+    var lastPartIndexes: Set<Int> { encoder.lastPartIndexes }
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     var timerCanceler: AnyCancellable?
     var lastSwitch: Date!
@@ -78,7 +78,7 @@ class RunningScenario: ObservableObject {
     private func nextPart() {
         part = encoder.nextQRPart()
         fragmentViews = (0 ..< seqLen).map { i in
-            encoder.partIndexes.contains(i) ? AnyView(Color.blue.brightness(0.2)) : AnyView(Color.blue)
+            encoder.lastPartIndexes.contains(i) ? AnyView(Color.blue.brightness(0.2)) : AnyView(Color.blue)
         }
     }
 
