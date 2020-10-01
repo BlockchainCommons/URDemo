@@ -484,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -496,6 +497,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -521,6 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

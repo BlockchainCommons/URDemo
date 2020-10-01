@@ -11,14 +11,14 @@ import WolfSwiftUI
 
 struct DisplayMenu: View {
     let scenarios = [
-        Scenario(name: "Sm Single Part", messageLen: 300, maxFragmentLen: 500),
-        Scenario(name: "Lg Single Part", messageLen: 800, maxFragmentLen: 1000),
-        Scenario(name: "Sm, X-Sm Frags", messageLen: 300, maxFragmentLen: 100),
-        Scenario(name: "Lg, Sm Frags", messageLen: 1024, maxFragmentLen: 250),
-        Scenario(name: "X-Lg, X-Sm Frags", messageLen: 10000, maxFragmentLen: 100),
-        Scenario(name: "X-Lg, Sm Frags", messageLen: 10000, maxFragmentLen: 250),
-        Scenario(name: "X-Lg, Lg Frags", messageLen: 10000, maxFragmentLen: 500),
-        Scenario(name: "X-Lg, X-Lg Frags", messageLen: 10000, maxFragmentLen: 700)
+        Scenario(name: "300b, Single Part", messageLen: 300, maxFragmentLen: 500),
+        Scenario(name: "800b, Single Part", messageLen: 800, maxFragmentLen: 1_000),
+        Scenario(name: "300b, 100b Frags", messageLen: 300, maxFragmentLen: 100),
+        Scenario(name: "1K, 250b Frags", messageLen: 1_024, maxFragmentLen: 250),
+        Scenario(name: "10K, 100b Frags", messageLen: 10_000, maxFragmentLen: 100),
+        Scenario(name: "10K, 250b Frags", messageLen: 10_000, maxFragmentLen: 250),
+        Scenario(name: "10K, 500b Frags", messageLen: 10_000, maxFragmentLen: 500),
+        Scenario(name: "10K, 700b Frags", messageLen: 10_000, maxFragmentLen: 700)
     ]
 
     var body: some View {
