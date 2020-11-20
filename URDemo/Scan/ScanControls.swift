@@ -1,5 +1,5 @@
 //
-//  ScanTopBar.swift
+//  ScanControls.swift
 //  URDemo
 //
 //  Created by Wolf McNally on 7/8/20.
@@ -8,27 +8,32 @@
 
 import SwiftUI
 
-struct ScanTopBar: View {
+struct ScanControls: View {
     @Binding var isPresenting: Bool
     let restart: () -> Void
 
     var body: some View {
         HStack {
-            Button(action: { self.isPresenting = false }) {
+            Button {
+                self.isPresenting = false
+            } label: {
                 Text("Done").bold()
             }
             Spacer()
-            Button(action: { self.restart() }) {
-                Image(systemName: "arrow.counterclockwise").imageScale(.medium)
+            Button {
+                self.restart()
+            } label: {
+                Image(systemName: "arrow.counterclockwise")
+                    .imageScale(.medium)
             }
         }
         .padding()
     }
 }
 
-struct ScanTopBar_Previews: PreviewProvider {
+struct ScanControls_Previews: PreviewProvider {
     static var previews: some View {
-        ScanTopBar(isPresenting: Binding.constant(true), restart: { })
+        ScanControls(isPresenting: Binding.constant(true), restart: { })
             .previewLayout(.sizeThatFits)
     }
 }

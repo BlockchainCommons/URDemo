@@ -35,7 +35,9 @@ struct DisplayScenario: View {
                 .font(.caption)
                 HStack {
                     Spacer()
-                    Button(action: { self.runningScenario.restart() }) {
+                    Button {
+                        self.runningScenario.restart()
+                    } label: {
                         Image(systemName: "arrow.counterclockwise")
                     }
                 }

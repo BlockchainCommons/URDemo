@@ -17,21 +17,18 @@ struct TopView: View {
         NavigationView {
             VStack {
                 DisplayMenu()
-                HStack {
-                    Button(action: {
-                        self.isPresentingScanner = true
-                    }) {
-                        Image(systemName: "qrcode.viewfinder")
-                            .font(Font.largeTitle)
-                    }
-                    .sheet(isPresented: $isPresentingScanner) {
-                        LazyView( Scanner(isPresenting: self.$isPresentingScanner, session: ScannerSession()) )
-                    }
-                }.padding()
+                IconButton(icon: Image(systemName: "qrcode.viewfinder")) {
+                    self.isPresentingScanner = true
+                }
+                .sheet(isPresented: $isPresentingScanner) {
+                    LazyView( Scanner(isPresenting: self.$isPresentingScanner) )
+                }
+                .padding()
             }
-            .navigationBarTitle("URKit")
+            .navigationBarTitle("URKit Demo")
         }
         .accentColor(.orange)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

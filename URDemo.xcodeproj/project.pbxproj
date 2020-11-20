@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0304072024B2FDEA00C6E7B2 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304071F24B2FDEA00C6E7B2 /* QRCode.swift */; };
-		031F9F2624B2E51100B3A837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2524B2E51100B3A837 /* AppDelegate.swift */; };
-		031F9F2824B2E51100B3A837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2724B2E51100B3A837 /* SceneDelegate.swift */; };
+		0308304E2564F37600011973 /* VideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308304D2564F37600011973 /* VideoSession.swift */; };
+		031F9F2624B2E51100B3A837 /* URDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2524B2E51100B3A837 /* URDemoApp.swift */; };
 		031F9F2A24B2E51100B3A837 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2924B2E51100B3A837 /* TopView.swift */; };
 		031F9F2C24B2E51200B3A837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031F9F2B24B2E51200B3A837 /* Assets.xcassets */; };
 		031F9F2F24B2E51200B3A837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031F9F2E24B2E51200B3A837 /* Preview Assets.xcassets */; };
@@ -28,11 +28,12 @@
 		0376FC0224B5814200BCFEA6 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0124B5814200BCFEA6 /* Sounds.swift */; };
 		0376FC0424B5979A00BCFEA6 /* FragmentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */; };
 		0376FC0624B598A200BCFEA6 /* RectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0524B598A200BCFEA6 /* RectExtensions.swift */; };
-		0376FC0824B66A8B00BCFEA6 /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0724B66A8B00BCFEA6 /* CodeScannerView.swift */; };
+		0376FC0824B66A8B00BCFEA6 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0724B66A8B00BCFEA6 /* VideoView.swift */; };
 		0376FC0A24B6807C00BCFEA6 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0924B6807C00BCFEA6 /* Scanner.swift */; };
-		0399168324B6A72600AA4C63 /* ScannerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168224B6A72600AA4C63 /* ScannerSession.swift */; };
-		0399168524B6C2A900AA4C63 /* ScanTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168424B6C2A900AA4C63 /* ScanTopBar.swift */; };
-		0399168724B6C34500AA4C63 /* ScanCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168624B6C34500AA4C63 /* ScanCameraView.swift */; };
+		03962F8825678EFA0078ABBA /* UIVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03962F8725678EFA0078ABBA /* UIVideoView.swift */; };
+		03962F9025679F2C0078ABBA /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03962F8F25679F2C0078ABBA /* IconButton.swift */; };
+		0399168324B6A72600AA4C63 /* ScanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168224B6A72600AA4C63 /* ScanState.swift */; };
+		0399168524B6C2A900AA4C63 /* ScanControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168424B6C2A900AA4C63 /* ScanControls.swift */; };
 		0399168924B6C3BA00AA4C63 /* ScanCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */; };
 		0399168B24B6C9CE00AA4C63 /* URSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */; };
 		0399168D24B6DBD500AA4C63 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168C24B6DBD500AA4C63 /* ProgressBar.swift */; };
@@ -65,9 +66,10 @@
 
 /* Begin PBXFileReference section */
 		0304071F24B2FDEA00C6E7B2 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		030830402564E7C200011973 /* URDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = URDemo.entitlements; sourceTree = "<group>"; };
+		0308304D2564F37600011973 /* VideoSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSession.swift; sourceTree = "<group>"; };
 		031F9F2224B2E51100B3A837 /* URDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		031F9F2524B2E51100B3A837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		031F9F2724B2E51100B3A837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		031F9F2524B2E51100B3A837 /* URDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URDemoApp.swift; sourceTree = "<group>"; };
 		031F9F2924B2E51100B3A837 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		031F9F2B24B2E51200B3A837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031F9F2E24B2E51200B3A837 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -87,11 +89,12 @@
 		0376FC0124B5814200BCFEA6 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentBar.swift; sourceTree = "<group>"; };
 		0376FC0524B598A200BCFEA6 /* RectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectExtensions.swift; sourceTree = "<group>"; };
-		0376FC0724B66A8B00BCFEA6 /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
+		0376FC0724B66A8B00BCFEA6 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		0376FC0924B6807C00BCFEA6 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
-		0399168224B6A72600AA4C63 /* ScannerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSession.swift; sourceTree = "<group>"; };
-		0399168424B6C2A900AA4C63 /* ScanTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTopBar.swift; sourceTree = "<group>"; };
-		0399168624B6C34500AA4C63 /* ScanCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCameraView.swift; sourceTree = "<group>"; };
+		03962F8725678EFA0078ABBA /* UIVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVideoView.swift; sourceTree = "<group>"; };
+		03962F8F25679F2C0078ABBA /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		0399168224B6A72600AA4C63 /* ScanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanState.swift; sourceTree = "<group>"; };
+		0399168424B6C2A900AA4C63 /* ScanControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanControls.swift; sourceTree = "<group>"; };
 		0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCompleteView.swift; sourceTree = "<group>"; };
 		0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URSummaryView.swift; sourceTree = "<group>"; };
 		0399168C24B6DBD500AA4C63 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
@@ -119,6 +122,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0308305325673CA400011973 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				0376FC0924B6807C00BCFEA6 /* Scanner.swift */,
+				0399168224B6A72600AA4C63 /* ScanState.swift */,
+				0376FC0724B66A8B00BCFEA6 /* VideoView.swift */,
+				03962F8725678EFA0078ABBA /* UIVideoView.swift */,
+				0399168424B6C2A900AA4C63 /* ScanControls.swift */,
+				0308304D2564F37600011973 /* VideoSession.swift */,
+				0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */,
+				0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */,
+				0399168C24B6DBD500AA4C63 /* ProgressBar.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
 		031F9F1924B2E51100B3A837 = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +160,8 @@
 		031F9F2424B2E51100B3A837 /* URDemo */ = {
 			isa = PBXGroup;
 			children = (
-				031F9F2524B2E51100B3A837 /* AppDelegate.swift */,
-				031F9F2724B2E51100B3A837 /* SceneDelegate.swift */,
+				030830402564E7C200011973 /* URDemo.entitlements */,
+				031F9F2524B2E51100B3A837 /* URDemoApp.swift */,
 				031F9F2924B2E51100B3A837 /* TopView.swift */,
 				031F9F5024B2EE1B00B3A837 /* Scenario.swift */,
 				0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */,
@@ -155,14 +174,8 @@
 				0376FBFD24B580A800BCFEA6 /* FeedbackGenerator.swift */,
 				0376FC0124B5814200BCFEA6 /* Sounds.swift */,
 				0376FC0524B598A200BCFEA6 /* RectExtensions.swift */,
-				0376FC0724B66A8B00BCFEA6 /* CodeScannerView.swift */,
-				0376FC0924B6807C00BCFEA6 /* Scanner.swift */,
-				0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */,
-				0399168624B6C34500AA4C63 /* ScanCameraView.swift */,
-				0399168424B6C2A900AA4C63 /* ScanTopBar.swift */,
-				0399168224B6A72600AA4C63 /* ScannerSession.swift */,
-				0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */,
-				0399168C24B6DBD500AA4C63 /* ProgressBar.swift */,
+				03962F8F25679F2C0078ABBA /* IconButton.swift */,
+				0308305325673CA400011973 /* Scan */,
 				0376FBFF24B5812A00BCFEA6 /* Sounds */,
 				031F9F2B24B2E51200B3A837 /* Assets.xcassets */,
 				031F9F3024B2E51200B3A837 /* LaunchScreen.storyboard */,
@@ -248,7 +261,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Arciem LLC";
 				TargetAttributes = {
 					031F9F2124B2E51100B3A837 = {
@@ -310,28 +323,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0376FC0824B66A8B00BCFEA6 /* CodeScannerView.swift in Sources */,
+				0376FC0824B66A8B00BCFEA6 /* VideoView.swift in Sources */,
 				031F9F5324B2EE5000B3A837 /* ScenarioRow.swift in Sources */,
 				0399168B24B6C9CE00AA4C63 /* URSummaryView.swift in Sources */,
 				0376FC0424B5979A00BCFEA6 /* FragmentBar.swift in Sources */,
-				031F9F2624B2E51100B3A837 /* AppDelegate.swift in Sources */,
+				031F9F2624B2E51100B3A837 /* URDemoApp.swift in Sources */,
 				0376FC0624B598A200BCFEA6 /* RectExtensions.swift in Sources */,
-				031F9F2824B2E51100B3A837 /* SceneDelegate.swift in Sources */,
-				0399168524B6C2A900AA4C63 /* ScanTopBar.swift in Sources */,
+				0399168524B6C2A900AA4C63 /* ScanControls.swift in Sources */,
 				0399168D24B6DBD500AA4C63 /* ProgressBar.swift in Sources */,
 				0399168924B6C3BA00AA4C63 /* ScanCompleteView.swift in Sources */,
 				031F9F2A24B2E51100B3A837 /* TopView.swift in Sources */,
-				0399168324B6A72600AA4C63 /* ScannerSession.swift in Sources */,
+				03962F8825678EFA0078ABBA /* UIVideoView.swift in Sources */,
+				0399168324B6A72600AA4C63 /* ScanState.swift in Sources */,
 				0376FC0224B5814200BCFEA6 /* Sounds.swift in Sources */,
 				031F9F4F24B2ED6E00B3A837 /* DisplayScenario.swift in Sources */,
 				0304072024B2FDEA00C6E7B2 /* QRCode.swift in Sources */,
+				03962F9025679F2C0078ABBA /* IconButton.swift in Sources */,
 				0376FBFE24B580A800BCFEA6 /* FeedbackGenerator.swift in Sources */,
 				0376FC0A24B6807C00BCFEA6 /* Scanner.swift in Sources */,
 				034FFFD024B3D8BE00E3B0D6 /* Utils.swift in Sources */,
-				0399168724B6C34500AA4C63 /* ScanCameraView.swift in Sources */,
 				031F9F4B24B2EC2F00B3A837 /* DisplayMenu.swift in Sources */,
 				034FFFCE24B3D12000E3B0D6 /* ImageUtils.swift in Sources */,
 				031F9F5124B2EE1B00B3A837 /* Scenario.swift in Sources */,
+				0308304E2564F37600011973 /* VideoSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +405,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -451,6 +466,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -483,8 +499,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = URDemo/URDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -493,14 +510,18 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = URDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -510,8 +531,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = URDemo/URDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -520,14 +542,18 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = URDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.0;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
