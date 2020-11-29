@@ -1,15 +1,15 @@
 //
-//  ScenarioRow.swift
-//  URDemo
+//  ScenarioMenuItem.swift
 //
-//  Created by Wolf McNally on 7/5/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
 import WolfSwiftUI
 
-struct ScenarioRow: View {
+/// A View that displays the details of a `Scenario` for possible selection.
+struct ScenarioMenuItem: View {
     let scenario: Scenario
 
     var body: some View {
@@ -29,10 +29,10 @@ struct ScenarioRow: View {
     }
 }
 
-struct ScenarioRow_Previews: PreviewProvider {
+struct ScenarioMenuItem_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            ScenarioRow(scenario: Scenario(name: "Test", messageLen: 1024, maxFragmentLen: 300))
+            ScenarioMenuItem(scenario: Scenario(name: "Test", messageLen: 1024, maxFragmentLen: 300))
         }
     .darkMode()
     }

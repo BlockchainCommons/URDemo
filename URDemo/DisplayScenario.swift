@@ -1,65 +1,81 @@
 //
 //  DisplayScenario.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/5/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
 import URKit
+import URUI
+import LifeHash
 
 protocol Preference { }
 
+/// A View that displays a (possibly animated) QR code including a LifeHash of the data being sent
+/// and a FragmentBar that shows which fragments are currently being displayed.
 struct DisplayScenario: View {
-    @ObservedObject var runningScenario: RunningScenario
+    let scenario: Scenario
+    @StateObject private var displayState: URDisplayState
+    @StateObject private var lifeHashState: LifeHashState
 
     @Environment(\.horizontalSizeClass) var sizeClass
 
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
     init(scenario: Scenario) {
-        self.runningScenario = RunningScenario(scenario: scenario)
+        self.scenario = scenario
+        let ur = scenario.makeUR()
+        self._displayState = StateObject(wrappedValue: URDisplayState(ur: ur, maxFragmentLen: scenario.maxFragmentLen))
+        self._lifeHashState = StateObject(wrappedValue: LifeHashState(input: ur.cbor))
     }
 
     @State var columnWidth: CGFloat?
+
+    func faster() {
+        displayState.framesPerSecond = min(displayState.framesPerSecond + 1, 20)
+    }
+
+    func slower() {
+        displayState.framesPerSecond = max(displayState.framesPerSecond - 1, 1.0)
+    }
 
     var body: some View {
         VStack(spacing: 20) {
             ZStack {
                 HStack {
-                    Text("length: \(runningScenario.messageLen)")
-                    Text("maxFragment: \(runningScenario.maxFragmentLen)")
-                    Text("parts: \(runningScenario.seqLen)")
+                    Text("length: \(scenario.messageLen)")
+                    Text("maxFragment: \(scenario.maxFragmentLen)")
+                    Text("parts: \(displayState.seqLen)")
                 }
                 .font(.caption)
-                HStack {
-                    Spacer()
-                    Button {
-                        self.runningScenario.restart()
-                    } label: {
-                        Image(systemName: "arrow.counterclockwise")
+                if !displayState.isSinglePart {
+                    HStack {
+                        Spacer()
+                        Button {
+                            displayState.restart()
+                        } label: {
+                            Image(systemName: "arrow.counterclockwise")
+                        }
                     }
                 }
             }
             VStack {
-                URSummaryView(ur: $runningScenario.ur, lifeHashState: runningScenario.lifeHashState)
-                QRCode(data: $runningScenario.part)
+                URSummaryView(ur: displayState.ur, lifeHashState: lifeHashState)
+                URQRCode(data: Binding.constant(displayState.part))
                     .frame(width: sizeClass == .regular ? 700 : 350)
                     .layoutPriority(1)
                     .background(GeometryReader {
-                        Color.clear.preference(key: self.columnWidthKey, value: [$0.size.width])
+                        Color.clear.preference(key: columnWidthKey, value: [$0.size.width])
                     })
-                if !runningScenario.isSinglePart {
-                    FragmentBar(views: $runningScenario.fragmentViews)
-                    .background(GeometryReader {
-                        Color.clear.preference(key: self.columnWidthKey, value: [$0.size.width])
-                    })
-                    Text("\(runningScenario.seqNum)").font(Font.system(.headline).bold().monospacedDigit())
+                if !displayState.isSinglePart {
+                    URFragmentBar(states: Binding.constant(displayState.fragmentStates))
+                        .background(GeometryReader {
+                            Color.clear.preference(key: columnWidthKey, value: [$0.size.width])
+                        })
+                    Text("\(displayState.seqNum)").font(Font.system(.headline).bold().monospacedDigit())
                     HStack(spacing: 40) {
-                        SpeedButton(imageName: "tortoise.fill") { self.runningScenario.slower() }
-                        Text("\(runningScenario.framesPerSecond, specifier: "%.0f") fps").font(Font.system(.headline).bold().monospacedDigit())
-                        SpeedButton(imageName: "hare.fill") { self.runningScenario.faster() }
+                        IconButton(imageName: "tortoise.fill") { slower() }
+                        Text("\(displayState.framesPerSecond, specifier: "%.0f") fps").font(Font.system(.headline).bold().monospacedDigit())
+                        IconButton(imageName: "hare.fill") { faster() }
                     }
                 }
                 Spacer()
@@ -67,17 +83,17 @@ struct DisplayScenario: View {
         }
         .frame(width: columnWidth)
         .padding()
-        .navigationBarTitle(runningScenario.name)
+        .navigationBarTitle(scenario.name)
         .onAppear {
-            self.runningScenario.run()
+            displayState.run()
         }
         .onDisappear {
-            self.runningScenario.stop()
+            displayState.stop()
         }
         .onPreferenceChange(columnWidthKey) { prefs in
             let minPref = prefs.reduce(CGFloat.infinity, min)
             if minPref > 0 {
-                self.columnWidth = minPref
+                columnWidth = minPref
             }
         }
     }
@@ -102,24 +118,5 @@ struct DisplayScenario_Previews: PreviewProvider {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .darkMode()
-    }
-}
-
-struct SpeedButton: View {
-    let imageName: String
-    let action: () -> Void
-
-    init(imageName: String, action: @escaping () -> Void) {
-        self.action = action
-        self.imageName = imageName
-    }
-
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        }
-        .frame(width: 32)
     }
 }

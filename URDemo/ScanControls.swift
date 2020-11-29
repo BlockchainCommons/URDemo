@@ -1,15 +1,15 @@
 //
 //  ScanControls.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/8/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
 
 struct ScanControls: View {
     @Binding var isPresenting: Bool
+    @Binding var isDone: Bool
     let restart: () -> Void
 
     var body: some View {
@@ -20,11 +20,14 @@ struct ScanControls: View {
                 Text("Done").bold()
             }
             Spacer()
-            Button {
-                self.restart()
-            } label: {
-                Image(systemName: "arrow.counterclockwise")
-                    .imageScale(.medium)
+
+            if !isDone {
+                Button {
+                    self.restart()
+                } label: {
+                    Image(systemName: "arrow.counterclockwise")
+                        .imageScale(.medium)
+                }
             }
         }
         .padding()
@@ -33,7 +36,7 @@ struct ScanControls: View {
 
 struct ScanControls_Previews: PreviewProvider {
     static var previews: some View {
-        ScanControls(isPresenting: Binding.constant(true), restart: { })
+        ScanControls(isPresenting: Binding.constant(true), isDone: Binding.constant(false), restart: { })
             .previewLayout(.sizeThatFits)
     }
 }

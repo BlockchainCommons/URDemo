@@ -1,21 +1,27 @@
 //
 //  IconButton.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 11/19/20.
+//  Created by Wolf McNally on 11/27/20.
 //  Copyright © 2020 Arciem LLC. All rights reserved.
 //
 
 import SwiftUI
 
 struct IconButton: View {
-    let icon: Image
+    let imageName: String
     let action: () -> Void
 
+    init(imageName: String, action: @escaping () -> Void) {
+        self.action = action
+        self.imageName = imageName
+    }
+
     var body: some View {
-        return Button(action: action) {
-            icon
-                .font(.largeTitle)
+        Button(action: action) {
+            Image(systemName: imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
         }
+        .frame(width: 32)
     }
 }

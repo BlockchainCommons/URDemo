@@ -1,9 +1,8 @@
 //
 //  ScanCompleteView.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/8/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
@@ -24,7 +23,7 @@ struct ScanCompleteView: View {
         case .success(let ur):
             return AnyView(
                 VStack {
-                    URSummaryView(ur: Binding.constant(ur), lifeHashState: LifeHashState(input: ur.cbor))
+                    URSummaryView(ur: ur, lifeHashState: LifeHashState(input: ur.cbor))
                     Spacer().frame(height: 20)
                     if elapsed > 0 {
                         Text("Elapsed time: \(elapsed, specifier: "%0.1f")s")

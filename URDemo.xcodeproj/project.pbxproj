@@ -7,49 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0304072024B2FDEA00C6E7B2 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304071F24B2FDEA00C6E7B2 /* QRCode.swift */; };
-		0308304E2564F37600011973 /* VideoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0308304D2564F37600011973 /* VideoSession.swift */; };
 		031F9F2624B2E51100B3A837 /* URDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2524B2E51100B3A837 /* URDemoApp.swift */; };
 		031F9F2A24B2E51100B3A837 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F2924B2E51100B3A837 /* TopView.swift */; };
 		031F9F2C24B2E51200B3A837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031F9F2B24B2E51200B3A837 /* Assets.xcassets */; };
 		031F9F2F24B2E51200B3A837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031F9F2E24B2E51200B3A837 /* Preview Assets.xcassets */; };
 		031F9F3224B2E51200B3A837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F9F3024B2E51200B3A837 /* LaunchScreen.storyboard */; };
-		031F9F3D24B2E51200B3A837 /* URDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F3C24B2E51200B3A837 /* URDemoTests.swift */; };
-		031F9F4B24B2EC2F00B3A837 /* DisplayMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F4A24B2EC2F00B3A837 /* DisplayMenu.swift */; };
+		031F9F4B24B2EC2F00B3A837 /* ScenarioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F4A24B2EC2F00B3A837 /* ScenarioMenu.swift */; };
 		031F9F4F24B2ED6E00B3A837 /* DisplayScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F4E24B2ED6E00B3A837 /* DisplayScenario.swift */; };
 		031F9F5124B2EE1B00B3A837 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F5024B2EE1B00B3A837 /* Scenario.swift */; };
-		031F9F5324B2EE5000B3A837 /* ScenarioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F5224B2EE5000B3A837 /* ScenarioRow.swift */; };
+		031F9F5324B2EE5000B3A837 /* ScenarioMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F5224B2EE5000B3A837 /* ScenarioMenuItem.swift */; };
 		034A933D24B4303B0079BD0E /* LifeHash in Frameworks */ = {isa = PBXBuildFile; productRef = 034A933C24B4303B0079BD0E /* LifeHash */; };
 		034FFFCC24B3D0B900E3B0D6 /* WolfSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 034FFFCB24B3D0B900E3B0D6 /* WolfSwiftUI */; };
-		034FFFCE24B3D12000E3B0D6 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FFFCD24B3D12000E3B0D6 /* ImageUtils.swift */; };
 		034FFFD024B3D8BE00E3B0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FFFCF24B3D8BE00E3B0D6 /* Utils.swift */; };
 		0376FBFE24B580A800BCFEA6 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FBFD24B580A800BCFEA6 /* FeedbackGenerator.swift */; };
 		0376FC0024B5812A00BCFEA6 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0376FBFF24B5812A00BCFEA6 /* Sounds */; };
-		0376FC0224B5814200BCFEA6 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0124B5814200BCFEA6 /* Sounds.swift */; };
-		0376FC0424B5979A00BCFEA6 /* FragmentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */; };
 		0376FC0624B598A200BCFEA6 /* RectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0524B598A200BCFEA6 /* RectExtensions.swift */; };
-		0376FC0824B66A8B00BCFEA6 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0724B66A8B00BCFEA6 /* VideoView.swift */; };
-		0376FC0A24B6807C00BCFEA6 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FC0924B6807C00BCFEA6 /* Scanner.swift */; };
-		03962F8825678EFA0078ABBA /* UIVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03962F8725678EFA0078ABBA /* UIVideoView.swift */; };
-		03962F9025679F2C0078ABBA /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03962F8F25679F2C0078ABBA /* IconButton.swift */; };
-		0399168324B6A72600AA4C63 /* ScanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168224B6A72600AA4C63 /* ScanState.swift */; };
-		0399168524B6C2A900AA4C63 /* ScanControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168424B6C2A900AA4C63 /* ScanControls.swift */; };
+		037BD9E2257220F1006D55DC /* URUI in Frameworks */ = {isa = PBXBuildFile; productRef = 037BD9E1257220F1006D55DC /* URUI */; };
+		037BD9E72572265E006D55DC /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037BD9E62572265E006D55DC /* Scanner.swift */; };
+		037BD9E925722744006D55DC /* ScanFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037BD9E825722744006D55DC /* ScanFeedback.swift */; };
+		037BD9EB25722901006D55DC /* ScanControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037BD9EA25722901006D55DC /* ScanControls.swift */; };
+		037BD9ED25722BAA006D55DC /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037BD9EC25722BAA006D55DC /* IconButton.swift */; };
 		0399168924B6C3BA00AA4C63 /* ScanCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */; };
 		0399168B24B6C9CE00AA4C63 /* URSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */; };
-		0399168D24B6DBD500AA4C63 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168C24B6DBD500AA4C63 /* ProgressBar.swift */; };
 		0399169024B7E43D00AA4C63 /* URKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0399168F24B7E43D00AA4C63 /* URKit */; };
 		0399169324B7E5AB00AA4C63 /* WolfSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0399169224B7E5AB00AA4C63 /* WolfSwiftUI */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		031F9F3924B2E51200B3A837 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 031F9F1A24B2E51100B3A837 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 031F9F2124B2E51100B3A837;
-			remoteInfo = URDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		031F9F5D24B2F78000B3A837 /* Embed Frameworks */ = {
@@ -65,9 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0304071F24B2FDEA00C6E7B2 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		030830402564E7C200011973 /* URDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = URDemo.entitlements; sourceTree = "<group>"; };
-		0308304D2564F37600011973 /* VideoSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSession.swift; sourceTree = "<group>"; };
 		031F9F2224B2E51100B3A837 /* URDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031F9F2524B2E51100B3A837 /* URDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URDemoApp.swift; sourceTree = "<group>"; };
 		031F9F2924B2E51100B3A837 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
@@ -75,29 +55,20 @@
 		031F9F2E24B2E51200B3A837 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		031F9F3124B2E51200B3A837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		031F9F3324B2E51200B3A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		031F9F3824B2E51200B3A837 /* URDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		031F9F3C24B2E51200B3A837 /* URDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URDemoTests.swift; sourceTree = "<group>"; };
-		031F9F3E24B2E51200B3A837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		031F9F4A24B2EC2F00B3A837 /* DisplayMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMenu.swift; sourceTree = "<group>"; };
+		031F9F4A24B2EC2F00B3A837 /* ScenarioMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenu.swift; sourceTree = "<group>"; };
 		031F9F4E24B2ED6E00B3A837 /* DisplayScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayScenario.swift; sourceTree = "<group>"; };
 		031F9F5024B2EE1B00B3A837 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
-		031F9F5224B2EE5000B3A837 /* ScenarioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioRow.swift; sourceTree = "<group>"; };
-		034FFFCD24B3D12000E3B0D6 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		031F9F5224B2EE5000B3A837 /* ScenarioMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioMenuItem.swift; sourceTree = "<group>"; };
 		034FFFCF24B3D8BE00E3B0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0376FBFD24B580A800BCFEA6 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
 		0376FBFF24B5812A00BCFEA6 /* Sounds */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sounds; sourceTree = SOURCE_ROOT; };
-		0376FC0124B5814200BCFEA6 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
-		0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentBar.swift; sourceTree = "<group>"; };
 		0376FC0524B598A200BCFEA6 /* RectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectExtensions.swift; sourceTree = "<group>"; };
-		0376FC0724B66A8B00BCFEA6 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		0376FC0924B6807C00BCFEA6 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
-		03962F8725678EFA0078ABBA /* UIVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVideoView.swift; sourceTree = "<group>"; };
-		03962F8F25679F2C0078ABBA /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
-		0399168224B6A72600AA4C63 /* ScanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanState.swift; sourceTree = "<group>"; };
-		0399168424B6C2A900AA4C63 /* ScanControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanControls.swift; sourceTree = "<group>"; };
+		037BD9E62572265E006D55DC /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		037BD9E825722744006D55DC /* ScanFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFeedback.swift; sourceTree = "<group>"; };
+		037BD9EA25722901006D55DC /* ScanControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanControls.swift; sourceTree = "<group>"; };
+		037BD9EC25722BAA006D55DC /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCompleteView.swift; sourceTree = "<group>"; };
 		0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URSummaryView.swift; sourceTree = "<group>"; };
-		0399168C24B6DBD500AA4C63 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,42 +78,19 @@
 			files = (
 				0399169024B7E43D00AA4C63 /* URKit in Frameworks */,
 				034A933D24B4303B0079BD0E /* LifeHash in Frameworks */,
+				037BD9E2257220F1006D55DC /* URUI in Frameworks */,
 				0399169324B7E5AB00AA4C63 /* WolfSwiftUI in Frameworks */,
 				034FFFCC24B3D0B900E3B0D6 /* WolfSwiftUI in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		031F9F3524B2E51200B3A837 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0308305325673CA400011973 /* Scan */ = {
-			isa = PBXGroup;
-			children = (
-				0376FC0924B6807C00BCFEA6 /* Scanner.swift */,
-				0399168224B6A72600AA4C63 /* ScanState.swift */,
-				0376FC0724B66A8B00BCFEA6 /* VideoView.swift */,
-				03962F8725678EFA0078ABBA /* UIVideoView.swift */,
-				0399168424B6C2A900AA4C63 /* ScanControls.swift */,
-				0308304D2564F37600011973 /* VideoSession.swift */,
-				0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */,
-				0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */,
-				0399168C24B6DBD500AA4C63 /* ProgressBar.swift */,
-			);
-			path = Scan;
-			sourceTree = "<group>";
-		};
 		031F9F1924B2E51100B3A837 = {
 			isa = PBXGroup;
 			children = (
 				031F9F2424B2E51100B3A837 /* URDemo */,
-				031F9F3B24B2E51200B3A837 /* URDemoTests */,
 				031F9F2324B2E51100B3A837 /* Products */,
 				033E574824B3C0EB0050D468 /* Frameworks */,
 			);
@@ -152,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				031F9F2224B2E51100B3A837 /* URDemo.app */,
-				031F9F3824B2E51200B3A837 /* URDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,18 +111,18 @@
 				031F9F2524B2E51100B3A837 /* URDemoApp.swift */,
 				031F9F2924B2E51100B3A837 /* TopView.swift */,
 				031F9F5024B2EE1B00B3A837 /* Scenario.swift */,
-				0376FC0324B5979A00BCFEA6 /* FragmentBar.swift */,
-				031F9F5224B2EE5000B3A837 /* ScenarioRow.swift */,
-				031F9F4A24B2EC2F00B3A837 /* DisplayMenu.swift */,
+				031F9F5224B2EE5000B3A837 /* ScenarioMenuItem.swift */,
+				031F9F4A24B2EC2F00B3A837 /* ScenarioMenu.swift */,
 				031F9F4E24B2ED6E00B3A837 /* DisplayScenario.swift */,
-				0304071F24B2FDEA00C6E7B2 /* QRCode.swift */,
-				034FFFCD24B3D12000E3B0D6 /* ImageUtils.swift */,
+				037BD9EC25722BAA006D55DC /* IconButton.swift */,
 				034FFFCF24B3D8BE00E3B0D6 /* Utils.swift */,
 				0376FBFD24B580A800BCFEA6 /* FeedbackGenerator.swift */,
-				0376FC0124B5814200BCFEA6 /* Sounds.swift */,
 				0376FC0524B598A200BCFEA6 /* RectExtensions.swift */,
-				03962F8F25679F2C0078ABBA /* IconButton.swift */,
-				0308305325673CA400011973 /* Scan */,
+				037BD9E62572265E006D55DC /* Scanner.swift */,
+				0399168824B6C3BA00AA4C63 /* ScanCompleteView.swift */,
+				0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */,
+				037BD9E825722744006D55DC /* ScanFeedback.swift */,
+				037BD9EA25722901006D55DC /* ScanControls.swift */,
 				0376FBFF24B5812A00BCFEA6 /* Sounds */,
 				031F9F2B24B2E51200B3A837 /* Assets.xcassets */,
 				031F9F3024B2E51200B3A837 /* LaunchScreen.storyboard */,
@@ -191,15 +138,6 @@
 				031F9F2E24B2E51200B3A837 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		031F9F3B24B2E51200B3A837 /* URDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				031F9F3C24B2E51200B3A837 /* URDemoTests.swift */,
-				031F9F3E24B2E51200B3A837 /* Info.plist */,
-			);
-			path = URDemoTests;
 			sourceTree = "<group>";
 		};
 		033E574824B3C0EB0050D468 /* Frameworks */ = {
@@ -231,28 +169,11 @@
 				034A933C24B4303B0079BD0E /* LifeHash */,
 				0399168F24B7E43D00AA4C63 /* URKit */,
 				0399169224B7E5AB00AA4C63 /* WolfSwiftUI */,
+				037BD9E1257220F1006D55DC /* URUI */,
 			);
 			productName = URDemo;
 			productReference = 031F9F2224B2E51100B3A837 /* URDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		031F9F3724B2E51200B3A837 /* URDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 031F9F4424B2E51200B3A837 /* Build configuration list for PBXNativeTarget "URDemoTests" */;
-			buildPhases = (
-				031F9F3424B2E51200B3A837 /* Sources */,
-				031F9F3524B2E51200B3A837 /* Frameworks */,
-				031F9F3624B2E51200B3A837 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				031F9F3A24B2E51200B3A837 /* PBXTargetDependency */,
-			);
-			name = URDemoTests;
-			productName = URDemoTests;
-			productReference = 031F9F3824B2E51200B3A837 /* URDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,10 +187,6 @@
 				TargetAttributes = {
 					031F9F2124B2E51100B3A837 = {
 						CreatedOnToolsVersion = 11.5;
-					};
-					031F9F3724B2E51200B3A837 = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 031F9F2124B2E51100B3A837;
 					};
 				};
 			};
@@ -286,13 +203,13 @@
 				034A933B24B4303B0079BD0E /* XCRemoteSwiftPackageReference "LifeHash" */,
 				0399168E24B7E43D00AA4C63 /* XCRemoteSwiftPackageReference "URKit" */,
 				0399169124B7E5AB00AA4C63 /* XCRemoteSwiftPackageReference "WolfSwiftUI" */,
+				037BD9E0257220F1006D55DC /* XCRemoteSwiftPackageReference "URUI" */,
 			);
 			productRefGroup = 031F9F2324B2E51100B3A837 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				031F9F2124B2E51100B3A837 /* URDemo */,
-				031F9F3724B2E51200B3A837 /* URDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +226,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		031F9F3624B2E51200B3A837 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -323,49 +233,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0376FC0824B66A8B00BCFEA6 /* VideoView.swift in Sources */,
-				031F9F5324B2EE5000B3A837 /* ScenarioRow.swift in Sources */,
+				031F9F5324B2EE5000B3A837 /* ScenarioMenuItem.swift in Sources */,
 				0399168B24B6C9CE00AA4C63 /* URSummaryView.swift in Sources */,
-				0376FC0424B5979A00BCFEA6 /* FragmentBar.swift in Sources */,
+				037BD9EB25722901006D55DC /* ScanControls.swift in Sources */,
 				031F9F2624B2E51100B3A837 /* URDemoApp.swift in Sources */,
+				037BD9E925722744006D55DC /* ScanFeedback.swift in Sources */,
 				0376FC0624B598A200BCFEA6 /* RectExtensions.swift in Sources */,
-				0399168524B6C2A900AA4C63 /* ScanControls.swift in Sources */,
-				0399168D24B6DBD500AA4C63 /* ProgressBar.swift in Sources */,
 				0399168924B6C3BA00AA4C63 /* ScanCompleteView.swift in Sources */,
 				031F9F2A24B2E51100B3A837 /* TopView.swift in Sources */,
-				03962F8825678EFA0078ABBA /* UIVideoView.swift in Sources */,
-				0399168324B6A72600AA4C63 /* ScanState.swift in Sources */,
-				0376FC0224B5814200BCFEA6 /* Sounds.swift in Sources */,
 				031F9F4F24B2ED6E00B3A837 /* DisplayScenario.swift in Sources */,
-				0304072024B2FDEA00C6E7B2 /* QRCode.swift in Sources */,
-				03962F9025679F2C0078ABBA /* IconButton.swift in Sources */,
+				037BD9ED25722BAA006D55DC /* IconButton.swift in Sources */,
 				0376FBFE24B580A800BCFEA6 /* FeedbackGenerator.swift in Sources */,
-				0376FC0A24B6807C00BCFEA6 /* Scanner.swift in Sources */,
 				034FFFD024B3D8BE00E3B0D6 /* Utils.swift in Sources */,
-				031F9F4B24B2EC2F00B3A837 /* DisplayMenu.swift in Sources */,
-				034FFFCE24B3D12000E3B0D6 /* ImageUtils.swift in Sources */,
+				031F9F4B24B2EC2F00B3A837 /* ScenarioMenu.swift in Sources */,
+				037BD9E72572265E006D55DC /* Scanner.swift in Sources */,
 				031F9F5124B2EE1B00B3A837 /* Scenario.swift in Sources */,
-				0308304E2564F37600011973 /* VideoSession.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		031F9F3424B2E51200B3A837 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				031F9F3D24B2E51200B3A837 /* URDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		031F9F3A24B2E51200B3A837 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 031F9F2124B2E51100B3A837 /* URDemo */;
-			targetProxy = 031F9F3924B2E51200B3A837 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		031F9F3024B2E51200B3A837 /* LaunchScreen.storyboard */ = {
@@ -501,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = URDemo/URDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -516,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = URDemo/URDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"URDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = YZHG975W3A;
 				ENABLE_PREVIEWS = YES;
@@ -548,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,50 +442,6 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		031F9F4524B2E51200B3A837 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZHG975W3A;
-				INFOPLIST_FILE = URDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URDemo.app/URDemo";
-			};
-			name = Debug;
-		};
-		031F9F4624B2E51200B3A837 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZHG975W3A;
-				INFOPLIST_FILE = URDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = blockchaincommons.URDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/URDemo.app/URDemo";
 			};
 			name = Release;
 		};
@@ -624,15 +466,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		031F9F4424B2E51200B3A837 /* Build configuration list for PBXNativeTarget "URDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				031F9F4524B2E51200B3A837 /* Debug */,
-				031F9F4624B2E51200B3A837 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -642,6 +475,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
+			};
+		};
+		037BD9E0257220F1006D55DC /* XCRemoteSwiftPackageReference "URUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BlockchainCommons/URUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 		0399168E24B7E43D00AA4C63 /* XCRemoteSwiftPackageReference "URKit" */ = {
@@ -671,6 +512,11 @@
 		034FFFCB24B3D0B900E3B0D6 /* WolfSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WolfSwiftUI;
+		};
+		037BD9E1257220F1006D55DC /* URUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 037BD9E0257220F1006D55DC /* XCRemoteSwiftPackageReference "URUI" */;
+			productName = URUI;
 		};
 		0399168F24B7E43D00AA4C63 /* URKit */ = {
 			isa = XCSwiftPackageProductDependency;

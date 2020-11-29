@@ -1,9 +1,8 @@
 //
 //  URSummaryView.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/8/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
@@ -11,7 +10,7 @@ import URKit
 import LifeHash
 
 struct URSummaryView: View {
-    @Binding var ur: UR
+    let ur: UR
     @ObservedObject var lifeHashState: LifeHashState
 
     let missingView: some View = Rectangle().foregroundColor(.secondary).opacity(0.5)
@@ -29,6 +28,6 @@ struct URSummaryView_Previews: PreviewProvider {
     static let ur = try! UR(type: "bytes", cbor: Data.random(100))
     static let lifeHashState = LifeHashState(input: ur.cbor)
     static var previews: some View {
-        return URSummaryView(ur: Binding.constant(ur), lifeHashState: lifeHashState)
+        return URSummaryView(ur: ur, lifeHashState: lifeHashState)
     }
 }

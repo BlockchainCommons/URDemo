@@ -1,23 +1,23 @@
 //
 //  TopView.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/5/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import SwiftUI
 import URKit
 import WolfSwiftUI
 
+// The top-level View of the app that displays the scenario menu and a button that initiates a scan.
 struct TopView: View {
     @State var isPresentingScanner: Bool = false
 
     var body: some View {
         NavigationView {
             VStack {
-                DisplayMenu()
-                IconButton(icon: Image(systemName: "qrcode.viewfinder")) {
+                ScenarioMenu()
+                IconButton(imageName: "qrcode.viewfinder") {
                     self.isPresentingScanner = true
                 }
                 .sheet(isPresented: $isPresentingScanner) {

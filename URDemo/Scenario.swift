@@ -1,97 +1,33 @@
 //
 //  Scenario.swift
-//  URDemo
 //
-//  Created by Wolf McNally on 7/5/20.
-//  Copyright © 2020 Arciem LLC. All rights reserved.
+//  Copyright © 2020 by Blockchain Commons, LLC
+//  Licensed under the "BSD-2-Clause Plus Patent License"
 //
 
 import Foundation
 import URKit
-import Combine
-import SwiftUI
-import LifeHash
 
+/// A scenario for displaying a (possibly animated) random UR.
 struct Scenario: Identifiable {
     let id: UUID = UUID()
     let name: String
     let messageLen: Int
     let maxFragmentLen: Int
-}
 
-extension UREncoder {
-    func nextQRPart() -> Data {
-        nextPart().uppercased().utf8
+    func makeUR() -> UR {
+        let message = Data.random(messageLen)
+        return makeBytesUR(message)
     }
 }
 
-class RunningScenario: ObservableObject {
-    let scenario: Scenario
-    static let defaultInterval: TimeInterval = 1.0 / 10
-    let name: String
-    var encoder: UREncoder!
-    var message: Data!
-    @Published var ur: UR!
-    let lifeHashState = LifeHashState()
-    let maxFragmentLen: Int
-    var isSinglePart: Bool { encoder.isSinglePart }
-    var messageLen: Int { message.count }
-    var seqNum: UInt32 { encoder.seqNum }
-    var seqLen: Int { encoder.seqLen }
-    var lastPartIndexes: Set<Int> { encoder.lastPartIndexes }
-    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
-    var timerCanceler: AnyCancellable?
-    var lastSwitch: Date!
-    var interval: TimeInterval = defaultInterval
-    @Published var framesPerSecond: Double = 1 / defaultInterval {
-        didSet { interval = 1 / framesPerSecond }
-    }
-    @Published var part: Data!
-    @Published var fragmentViews: [AnyView] = [AnyView(EmptyView())]
-
-    init(scenario: Scenario) {
-        self.scenario = scenario
-        name = scenario.name
-        maxFragmentLen = scenario.maxFragmentLen
-        restart()
-    }
-
-    func restart() {
-        message = Data.random(scenario.messageLen)
-        ur = makeBytesUR(message)
-        lifeHashState.input = ur.cbor
-        encoder = UREncoder(ur, maxFragmentLen: maxFragmentLen)
-        lastSwitch = Date()
-        self.nextPart()
-    }
-
-    func run() {
-        guard !self.isSinglePart else { return }
-        timerCanceler = timer.sink { [unowned self] date in
-            guard date > self.lastSwitch + self.interval else { return }
-            self.lastSwitch = date
-            //click.play()
-            self.nextPart()
-        }
-    }
-
-    private func nextPart() {
-        part = encoder.nextQRPart()
-        fragmentViews = (0 ..< seqLen).map { i in
-            encoder.lastPartIndexes.contains(i) ? AnyView(Color.blue.brightness(0.2)) : AnyView(Color.blue)
-        }
-    }
-
-    func stop() {
-        timerCanceler?.cancel()
-        timerCanceler = nil
-    }
-
-    func faster() {
-        framesPerSecond = min(framesPerSecond + 1, 20)
-    }
-
-    func slower() {
-        framesPerSecond = max(framesPerSecond - 1, 1.0)
-    }
-}
+let scenarios = [
+    Scenario(name: "300b, Single Part", messageLen: 300, maxFragmentLen: 500),
+    Scenario(name: "800b, Single Part", messageLen: 800, maxFragmentLen: 1_000),
+    Scenario(name: "300b, 100b Frags", messageLen: 300, maxFragmentLen: 100),
+    Scenario(name: "1K, 250b Frags", messageLen: 1_024, maxFragmentLen: 250),
+    Scenario(name: "10K, 100b Frags", messageLen: 10_000, maxFragmentLen: 100),
+    Scenario(name: "10K, 250b Frags", messageLen: 10_000, maxFragmentLen: 250),
+    Scenario(name: "10K, 500b Frags", messageLen: 10_000, maxFragmentLen: 500),
+    Scenario(name: "10K, 700b Frags", messageLen: 10_000, maxFragmentLen: 700)
+]
