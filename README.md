@@ -51,7 +51,7 @@ Explanation of the URDemo iOS application, which demonstrates Blockchain Commons
 
 https://youtu.be/t-GGZ9FyuT8
 
-### Referemce Video
+### Reference Video
 
 Video of Animated QR codes with test reference data for different sizes of UR data, from small single QR codes to large animated fountain codes. 
 
