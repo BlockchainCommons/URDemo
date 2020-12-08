@@ -1,4 +1,5 @@
 # URDemo
+### _by Wolf McNally and Christopher Allen_
 
 **URDemo** is an app to demonstrate sending and receiving of URs using URKit
 
