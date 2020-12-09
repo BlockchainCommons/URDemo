@@ -5,14 +5,6 @@
 
 This app is written in Swift using SwiftUI. It demonstrates the use of [URKit](https://github.com/BlockchainCommons/URKit) to send and receive single-part and multi-part [Uniform Resources (URs)](https://github.com/BlockchainCommons/Research/blob/master/papers/bcr-2020-005-ur.md) via QR codes. Multi-part QR codes are generated using [Luby Transform code](https://en.wikipedia.org/wiki/Luby_transform_code) (fountain codes).
 
-## Requirements
-
-* Swift 5, iOS 13, and Xcode 11.5
-
-## Installation
-
-* Open `URDemo.xcodeworkspace`, wait for the dependencies to resolve, and build the `URDemo` target for your iOS device.
-
 ## Additional Information
 
 ### Screen Shots
@@ -56,6 +48,14 @@ https://youtu.be/YwgSmOa4ltg
 ## Status - Late Alpha
 
 **URDemo** is currently under active development and in the late alpha testing phase. It should not be used for production tasks until it has had further testing and auditing.
+
+## Prerequisites
+
+* Swift 5, iOS 13, and Xcode 11.5
+
+## Installation Instructions
+
+* Open `URDemo.xcodeworkspace`, wait for the dependencies to resolve, and build the `URDemo` target for your iOS device.
 
 ## Origin, Authors, Copyright & Licenses
 
