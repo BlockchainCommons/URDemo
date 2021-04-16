@@ -60,14 +60,14 @@ struct DisplayScenario: View {
             }
             VStack {
                 URSummaryView(ur: displayState.ur, lifeHashState: lifeHashState)
-                URQRCode(data: Binding.constant(displayState.part))
+                URQRCode(data: .constant(displayState.part))
                     .frame(width: sizeClass == .regular ? 700 : 350)
                     .layoutPriority(1)
                     .background(GeometryReader {
                         Color.clear.preference(key: columnWidthKey, value: [$0.size.width])
                     })
                 if !displayState.isSinglePart {
-                    URFragmentBar(states: Binding.constant(displayState.fragmentStates))
+                    URFragmentBar(states: .constant(displayState.fragmentStates))
                         .background(GeometryReader {
                             Color.clear.preference(key: columnWidthKey, value: [$0.size.width])
                         })

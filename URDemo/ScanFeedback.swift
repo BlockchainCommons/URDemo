@@ -6,18 +6,17 @@
 //
 
 import Foundation
-import URUI
 
-struct ScanFeedback: URScanFeedbackProvider {
-    func progress() {
+enum ScanFeedback {
+    static func progress() {
         Self.click.play()
     }
 
-    func success() {
+    static func success() {
         Self.beep4.play()
     }
 
-    func error() {
+    static func error() {
         Self.beepError.play()
     }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScanControls: View {
     @Binding var isPresenting: Bool
-    @Binding var isDone: Bool
+    @Binding var canRestart: Bool
     let restart: () -> Void
 
     var body: some View {
@@ -21,7 +21,7 @@ struct ScanControls: View {
             }
             Spacer()
 
-            if !isDone {
+            if canRestart {
                 Button {
                     self.restart()
                 } label: {
@@ -36,7 +36,7 @@ struct ScanControls: View {
 
 struct ScanControls_Previews: PreviewProvider {
     static var previews: some View {
-        ScanControls(isPresenting: Binding.constant(true), isDone: Binding.constant(false), restart: { })
+        ScanControls(isPresenting: .constant(true), canRestart: .constant(true), restart: { })
             .previewLayout(.sizeThatFits)
     }
 }

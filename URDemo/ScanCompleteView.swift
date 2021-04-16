@@ -35,10 +35,10 @@ struct ScanCompleteView: View {
             return ScrollView {
                 VStack(spacing: 10) {
                     Text("Scanned non-UR QR Code:")
-                        .font(.title)
+                        .font(.body)
                         .bold()
                     Text(string)
-                        .font(Font.system(.body, design: .monospaced))
+                        .font(.system(.body, design: .monospaced)).bold()
                 }
             }
             .padding()
@@ -46,6 +46,8 @@ struct ScanCompleteView: View {
         case .failure(let error):
             return Text("🛑 \(error.localizedDescription)")
                 .eraseToAnyView()
+        default:
+            fatalError()
         }
     }
 }

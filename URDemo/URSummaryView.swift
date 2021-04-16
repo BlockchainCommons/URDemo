@@ -17,9 +17,12 @@ struct URSummaryView: View {
 
     var body: some View {
         VStack {
-            LifeHashView(state: lifeHashState, missingView: missingView)
-                .frame(height: 128)
-            Text("ur:\(ur.type)/<\(String(ur.cbor.count))>").font(.system(.caption, design: .monospaced)).bold()
+            // Don't show LifeHash for other UR types, because we don't know how to properly make a digest of them.
+            if ur.type == "bytes" {
+                LifeHashView(state: lifeHashState, missingView: missingView)
+                    .frame(height: 128)
+            }
+            Text("ur:\(ur.type)/<\(String(ur.cbor.count))>").font(.system(.body, design: .monospaced)).bold()
         }
     }
 }

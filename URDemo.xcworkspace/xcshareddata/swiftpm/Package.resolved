@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/BlockchainCommons/URKit.git",
         "state": {
           "branch": null,
-          "revision": "ed0fd08183fa7b933669ac8cdd26bcd0decf9edc",
-          "version": "2.3.2"
+          "revision": "ad8915b0c0a2a56eb653f686f77445ce72267c6d",
+          "version": "2.4.0"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/BlockchainCommons/URUI.git",
         "state": {
           "branch": null,
-          "revision": "216b5783743c708c7134d649b7b7cc5a2aa9e502",
-          "version": "2.0.0"
+          "revision": "a4c2bfa51fe95737acea5e297a41bd472a3d5a72",
+          "version": "3.0.0"
         }
       },
       {
