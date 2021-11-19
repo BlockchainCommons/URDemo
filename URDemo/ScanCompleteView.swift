@@ -11,12 +11,59 @@ import WolfSwiftUI
 import LifeHash
 import URUI
 
+let nanosecondsPerSecond: UInt64 = 1_000_000_000
+
 struct ScanCompleteView: View {
     let result: URScanResult
     let elapsed: TimeInterval
+    @State private var isMessageVisible: Bool = false
+
+    static let copied = FeedbackGenerator(haptic: .heavy)
 
     var body: some View {
-        containedView
+        VStack(spacing: 20) {
+            containedView
+            if let copyValue = copyValue {
+                Button {
+                    UIPasteboard.general.string = copyValue
+                    confirmCopy()
+                } label: {
+                    Label("Copy", systemImage: "doc.on.doc")
+                }
+                .buttonStyle(.borderedProminent)
+            }
+            Text("Copied!")
+                .bold()
+                .opacity(isMessageVisible ? 1 : 0)
+        }
+    }
+
+    func confirmCopy() {
+        Self.copied.play()
+        withAnimation(.easeIn(duration: 0.05)) {
+            isMessageVisible = true
+        }
+        Task {
+            await removeMessage()
+        }
+    }
+
+    func removeMessage() async {
+        await Task.sleep(1 * nanosecondsPerSecond)
+        withAnimation {
+            isMessageVisible = false
+        }
+    }
+    
+    var copyValue: String? {
+        switch result {
+        case .ur(let ur):
+            return ur.string
+        case .other(let string):
+            return string
+        default:
+            return nil
+        }
     }
 
     var containedView: AnyView {
