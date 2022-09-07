@@ -10,6 +10,7 @@ import URKit
 import WolfSwiftUI
 import LifeHash
 import URUI
+import WolfBase
 
 let nanosecondsPerSecond: UInt64 = 1_000_000_000
 
@@ -49,7 +50,7 @@ struct ScanCompleteView: View {
     }
 
     func removeMessage() async {
-        await Task.sleep(1 * nanosecondsPerSecond)
+        try! await Task.sleep(seconds: 1)
         withAnimation {
             isMessageVisible = false
         }

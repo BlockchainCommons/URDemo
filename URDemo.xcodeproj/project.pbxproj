@@ -16,7 +16,6 @@
 		031F9F4F24B2ED6E00B3A837 /* DisplayScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F4E24B2ED6E00B3A837 /* DisplayScenario.swift */; };
 		031F9F5124B2EE1B00B3A837 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F5024B2EE1B00B3A837 /* Scenario.swift */; };
 		031F9F5324B2EE5000B3A837 /* ScenarioMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F9F5224B2EE5000B3A837 /* ScenarioMenuItem.swift */; };
-		034A933D24B4303B0079BD0E /* LifeHash in Frameworks */ = {isa = PBXBuildFile; productRef = 034A933C24B4303B0079BD0E /* LifeHash */; };
 		034FFFCC24B3D0B900E3B0D6 /* WolfSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 034FFFCB24B3D0B900E3B0D6 /* WolfSwiftUI */; };
 		034FFFD024B3D8BE00E3B0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034FFFCF24B3D8BE00E3B0D6 /* Utils.swift */; };
 		0376FBFE24B580A800BCFEA6 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376FBFD24B580A800BCFEA6 /* FeedbackGenerator.swift */; };
@@ -31,6 +30,7 @@
 		0399168B24B6C9CE00AA4C63 /* URSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399168A24B6C9CE00AA4C63 /* URSummaryView.swift */; };
 		0399169024B7E43D00AA4C63 /* URKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0399168F24B7E43D00AA4C63 /* URKit */; };
 		0399169324B7E5AB00AA4C63 /* WolfSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0399169224B7E5AB00AA4C63 /* WolfSwiftUI */; };
+		79B8C95A28C8548A00DE967A /* LifeHash in Frameworks */ = {isa = PBXBuildFile; productRef = 79B8C95928C8548A00DE967A /* LifeHash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B8C95A28C8548A00DE967A /* LifeHash in Frameworks */,
 				0399169024B7E43D00AA4C63 /* URKit in Frameworks */,
-				034A933D24B4303B0079BD0E /* LifeHash in Frameworks */,
 				037BD9E2257220F1006D55DC /* URUI in Frameworks */,
 				0399169324B7E5AB00AA4C63 /* WolfSwiftUI in Frameworks */,
 				034FFFCC24B3D0B900E3B0D6 /* WolfSwiftUI in Frameworks */,
@@ -166,10 +166,10 @@
 			name = URDemo;
 			packageProductDependencies = (
 				034FFFCB24B3D0B900E3B0D6 /* WolfSwiftUI */,
-				034A933C24B4303B0079BD0E /* LifeHash */,
 				0399168F24B7E43D00AA4C63 /* URKit */,
 				0399169224B7E5AB00AA4C63 /* WolfSwiftUI */,
 				037BD9E1257220F1006D55DC /* URUI */,
+				79B8C95928C8548A00DE967A /* LifeHash */,
 			);
 			productName = URDemo;
 			productReference = 031F9F2224B2E51100B3A837 /* URDemo.app */;
@@ -200,10 +200,10 @@
 			);
 			mainGroup = 031F9F1924B2E51100B3A837;
 			packageReferences = (
-				034A933B24B4303B0079BD0E /* XCRemoteSwiftPackageReference "LifeHash" */,
 				0399168E24B7E43D00AA4C63 /* XCRemoteSwiftPackageReference "URKit" */,
 				0399169124B7E5AB00AA4C63 /* XCRemoteSwiftPackageReference "WolfSwiftUI" */,
 				037BD9E0257220F1006D55DC /* XCRemoteSwiftPackageReference "URUI" */,
+				79B8C95828C8548A00DE967A /* XCRemoteSwiftPackageReference "LifeHash" */,
 			);
 			productRefGroup = 031F9F2324B2E51100B3A837 /* Products */;
 			projectDirPath = "";
@@ -467,20 +467,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		034A933B24B4303B0079BD0E /* XCRemoteSwiftPackageReference "LifeHash" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wolfmcnally/LifeHash.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		037BD9E0257220F1006D55DC /* XCRemoteSwiftPackageReference "URUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BlockchainCommons/URUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 		0399168E24B7E43D00AA4C63 /* XCRemoteSwiftPackageReference "URKit" */ = {
@@ -488,7 +480,7 @@
 			repositoryURL = "https://github.com/BlockchainCommons/URKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 7.0.0;
 			};
 		};
 		0399169124B7E5AB00AA4C63 /* XCRemoteSwiftPackageReference "WolfSwiftUI" */ = {
@@ -496,17 +488,20 @@
 			repositoryURL = "https://github.com/wolfmcnally/WolfSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
+				minimumVersion = 2.0.0;
+			};
+		};
+		79B8C95828C8548A00DE967A /* XCRemoteSwiftPackageReference "LifeHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BlockchainCommons/LifeHash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		034A933C24B4303B0079BD0E /* LifeHash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 034A933B24B4303B0079BD0E /* XCRemoteSwiftPackageReference "LifeHash" */;
-			productName = LifeHash;
-		};
 		034FFFCB24B3D0B900E3B0D6 /* WolfSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WolfSwiftUI;
@@ -525,6 +520,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0399169124B7E5AB00AA4C63 /* XCRemoteSwiftPackageReference "WolfSwiftUI" */;
 			productName = WolfSwiftUI;
+		};
+		79B8C95928C8548A00DE967A /* LifeHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79B8C95828C8548A00DE967A /* XCRemoteSwiftPackageReference "LifeHash" */;
+			productName = LifeHash;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

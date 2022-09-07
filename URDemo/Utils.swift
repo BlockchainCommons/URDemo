@@ -38,6 +38,5 @@ extension Array where Element == UInt8 {
 }
 
 func makeBytesUR(_ data: Data) -> UR {
-    let cbor = CBOR.byteString(data.bytes).cborEncode().data
-    return try! UR(type: "bytes", cbor: cbor)
+    return try! UR(type: "bytes", cbor: data)
 }

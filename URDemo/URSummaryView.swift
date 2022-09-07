@@ -13,13 +13,14 @@ struct URSummaryView: View {
     let ur: UR
     @ObservedObject var lifeHashState: LifeHashState
 
-    let missingView: some View = Rectangle().foregroundColor(.secondary).opacity(0.5)
-
     var body: some View {
         VStack {
             // Don't show LifeHash for other UR types, because we don't know how to properly make a digest of them.
             if ur.type == "bytes" {
-                LifeHashView(state: lifeHashState, missingView: missingView)
+                LifeHashView(state: lifeHashState){
+                    Rectangle()
+                        .fill(Color.gray)
+                }
                     .frame(height: 128)
             }
             Text("ur:\(ur.type)/<\(String(ur.cbor.count))>").font(.system(.body, design: .monospaced)).bold()

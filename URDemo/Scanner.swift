@@ -10,17 +10,29 @@ import URKit
 import URUI
 
 struct Scanner: View {
+    let codesPublisher: URCodesPublisher
+
     @Binding var isPresenting: Bool
-    @StateObject var scanState = URScanState()
+    @StateObject private var videoSession: URVideoSession
+    @StateObject private var scanState: URScanState
     @State private var estimatedPercentComplete = 0.0
     @State private var fragmentStates = [URFragmentBar.FragmentState]()
     @State private var canRestart = true
     @State private var result: URScanResult?
     @State private var startDate: Date?
-    
+
     private var elapsedTime: TimeInterval {
         guard let startDate = startDate else { return 0 }
         return Date.timeIntervalSinceReferenceDate - startDate.timeIntervalSinceReferenceDate
+    }
+
+    init(isPresenting: Binding<Bool>) {
+        self._isPresenting = isPresenting
+
+        let codesPublisher = URCodesPublisher()
+        self.codesPublisher = codesPublisher
+        self._videoSession = StateObject(wrappedValue: URVideoSession(codesPublisher: codesPublisher))
+        self._scanState = StateObject(wrappedValue: URScanState(codesPublisher: codesPublisher))
     }
     
     func restart() {
@@ -38,7 +50,7 @@ struct Scanner: View {
             if let result = result {
                 ScanCompleteView(result: result, elapsed: elapsedTime)
             } else {
-                URVideo(scanState: scanState)
+                URVideo(videoSession: videoSession)
             }
             Spacer()
             VStack {
