@@ -71,11 +71,11 @@ struct ScanCompleteView: View {
         switch result {
         case .ur(let ur):
             return VStack {
-                URSummaryView(ur: ur, lifeHashState: LifeHashState(input: ur.cbor))
+                URSummaryView(ur: ur, lifeHashState: LifeHashState(input: ur.cbor.cborData))
                 Spacer().frame(height: 20)
                 if elapsed > 0 {
                     Text("Elapsed time: \(elapsed, specifier: "%0.1f")s")
-                    Text("Bytes/s: \(Double(ur.cbor.count) / elapsed, specifier: "%0.1f")")
+                    Text("Bytes/s: \(Double(ur.cbor.cborData.count) / elapsed, specifier: "%0.1f")")
                 }
             }
             .eraseToAnyView()
@@ -102,6 +102,6 @@ struct ScanCompleteView: View {
 
 struct ScanCompleteView_Previews: PreviewProvider {
     static var previews: some View {
-        try! ScanCompleteView(result: .ur(UR(type: "bytes", cbor: Data.random(100))), elapsed: 20)
+        try! ScanCompleteView(result: .ur(UR(type: "bytes", cbor: Data.random(100).cbor)), elapsed: 20)
     }
 }

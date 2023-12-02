@@ -38,5 +38,5 @@ extension Array where Element == UInt8 {
 }
 
 func makeBytesUR(_ data: Data) -> UR {
-    return try! UR(type: "bytes", cbor: data)
+    return try! UR(type: "bytes", cbor: data.cbor)
 }

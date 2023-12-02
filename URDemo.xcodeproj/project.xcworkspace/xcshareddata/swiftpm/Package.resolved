@@ -5,8 +5,44 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BlockchainCommons/bc-lifehash",
       "state" : {
-        "revision" : "518f4398982a327fd14d745d192e28b23f44463f",
-        "version" : "0.4.0"
+        "revision" : "9f1d125749b763b932619e682588bb7f26933d29",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "bcswiftcrypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BlockchainCommons/BCSwiftCrypto.git",
+      "state" : {
+        "revision" : "b471e177fc106d33ee8126aec5d03422402795f1",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "bcswiftdcbor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BlockchainCommons/BCSwiftDCBOR",
+      "state" : {
+        "revision" : "af83405b6238e5ff6973976553067666227b4a48",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "bcswiftfloat16",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/blockchaincommons/BCSwiftFloat16.git",
+      "state" : {
+        "revision" : "71f380285d88a876f9cdf4e34e2e9e77d7ca4aef",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "db51c407d3be4a051484a141bf0bff36c43d3b1e",
+        "version" : "1.8.0"
       }
     },
     {
@@ -14,8 +50,44 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BlockchainCommons/LifeHash.git",
       "state" : {
-        "revision" : "37578f87440d1efd37f0e4cf11af3463303b6b46",
-        "version" : "6.3.1"
+        "revision" : "485ea086bc320c33423abeea9e9123873369d767",
+        "version" : "7.0.0"
+      }
+    },
+    {
+      "identity" : "secp256k1-zkp.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BlockchainCommons/secp256k1-zkp.swift.git",
+      "state" : {
+        "revision" : "e8f21c7d8d4dd7ac778e51427b908194f3fd9d82",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wolfmcnally/swift-collections",
+      "state" : {
+        "revision" : "53a8adc54374f620002a3b6401d39e0feb3c57ae",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
       }
     },
     {
@@ -23,8 +95,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BlockchainCommons/URKit.git",
       "state" : {
-        "revision" : "1b36dc6c6dbf2b851e02e008eaea85b68b102ecc",
-        "version" : "7.4.2"
+        "revision" : "527d97f3d62ea7d6ecfa3bb0f28a22ce879fdf38",
+        "version" : "12.0.0"
       }
     },
     {
@@ -32,17 +104,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BlockchainCommons/URUI.git",
       "state" : {
-        "revision" : "c5a1048adbb76164db42d87e2c46a1cc2979aa19",
-        "version" : "4.0.4"
+        "revision" : "178de95512a79207e5efe1b69ab9fd59473917e2",
+        "version" : "9.0.0"
       }
     },
     {
       "identity" : "wolfbase",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/wolfmcnally/WolfBase",
+      "location" : "https://github.com/wolfmcnally/WolfBase.git",
       "state" : {
-        "revision" : "098eaa6bb1d28fd01c36cd6030bee4e4209c4ca3",
-        "version" : "4.5.1"
+        "revision" : "91c8cad45e6325ab76db1b5b60c5f6616d52a0cb",
+        "version" : "6.0.0"
       }
     },
     {
@@ -50,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/wolfmcnally/WolfSwiftUI.git",
       "state" : {
-        "revision" : "ffbc163dd5ce6ea82be9e1890ee59e1dee2ce80d",
-        "version" : "2.2.0"
+        "revision" : "7bef027c103c939e34b84766ea2e9b25d27b1f9b",
+        "version" : "3.0.0"
       }
     }
   ],

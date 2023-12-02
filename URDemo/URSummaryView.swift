@@ -23,14 +23,14 @@ struct URSummaryView: View {
                 }
                     .frame(height: 128)
             }
-            Text("ur:\(ur.type)/<\(String(ur.cbor.count))>").font(.system(.body, design: .monospaced)).bold()
+            Text("ur:\(ur.type)/<\(String(ur.cbor.cborData.count))>").font(.system(.body, design: .monospaced)).bold()
         }
     }
 }
 
 struct URSummaryView_Previews: PreviewProvider {
-    static let ur = try! UR(type: "bytes", cbor: Data.random(100))
-    static let lifeHashState = LifeHashState(input: ur.cbor)
+    static let ur = try! UR(type: "bytes", cbor: Data.random(100).cbor)
+    static let lifeHashState = LifeHashState(input: ur.cbor.cborData)
     static var previews: some View {
         return URSummaryView(ur: ur, lifeHashState: lifeHashState)
     }

@@ -25,7 +25,7 @@ struct DisplayScenario: View {
         self.scenario = scenario
         let ur = scenario.makeUR()
         self._displayState = StateObject(wrappedValue: URDisplayState(ur: ur, maxFragmentLen: scenario.maxFragmentLen))
-        self._lifeHashState = StateObject(wrappedValue: LifeHashState(input: ur.cbor))
+        self._lifeHashState = StateObject(wrappedValue: LifeHashState(input: ur.cbor.cborData))
     }
 
     @State var columnWidth: CGFloat?
